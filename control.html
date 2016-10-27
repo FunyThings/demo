@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>控制台</title>
+	<link rel="stylesheet" href="style/control.css">
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<img class="logo" src="imgs/logo2.png" alt="">
+		</div>
+		<div class="content">
+			<!--左侧菜单-->
+			<div class="left-content" id="lc">
+				<div class="overview-img-div">
+					<img class="overview-img" src="imgs/three.png" alt="">
+				</div>
+				<div class="overview-div">
+					<img src="imgs/eye1.png" alt="">
+					<div class="overview"><span>概览</span>
+					</div>
+				</div>
+				<div class="cloud-server-monitor-div">
+					    <div class="cloud-server-monitor">
+							<img class="clould-img" src="imgs/cloud1.png" alt="">
+						    <span>云服务监控</span>
+						    <img  class="arrow-down" src="imgs/arrowdown.png" alt="">
+					    </div>
+					    <div class="server-tree" id="server-tree1"><span>服务1</span></div>
+						<div class="server-tree" id="server-tree2"><span>服务2</span></div>
+						<div class="server-tree" id="server-tree3"><span>服务3</span></div>
+				</div>
+				<div class="user-manage-div">
+					<img src="imgs/user1.png" alt="">
+					<div class="user-manage"><span>用户管理</span></div>
+				</div>
+				<div class="change-pwd-div">
+					<img src="imgs/changepwd1.png" alt="">
+					<div class="change-pwd"><span>修改密码</span></div>
+				</div>
+			</div>
+			<div class="right-content">
+			  <!--右侧概览页-->
+			  <div class="right-content1 rc-height">
+				<div class="right-overview">
+					<span>概览</span>
+				</div>
+				<div class="overview-content">
+					<div class="main-info">
+						<div class="main-info-topic"><span>总体信息</span></div>
+						<div class="main-servers" >
+							<div class="all-servers-div">
+								<ul class="all-servers">
+									<li class="server-info"><span>AU:</span><span>10</span></li>
+									<li class="server-info"><span>PU:</span><span>3</span></li>
+									<li class="server-info"><span>BU:</span><span>7</span></li>
+									<li class="server-info"><span>LU:</span><span>8</span></li>
+									<li class="server-info"><span>NU:</span><span>0</span></li>
+								</ul>
+								<div class="server-state">
+									<ul class="treeline">
+										<li></li>
+										<li></li>
+									</ul>
+									<ul class="three-state">
+                                        <li>
+                                        	<b style="background-color: #008cee"></b>
+                                        	<span>运行中</span>
+                                        	<i>6</i>
+                                        </li>
+                                        <li>
+                                        	<b style="background-color: #d9d214"></b>
+                                        	<span>异常</span>
+                                        	<i>1</i>
+                                        </li>
+                                        <li>
+                                        	<b style="background-color: #d9143e"></b>
+                                        	<span>已停止</span>
+                                        	<i>3</i>
+                                        </li>
+                                    </ul>
+								</div>
+							</div>
+						</div>
+						<div class="business-servers">
+							<div class="business-server-div">
+								<ul class="all-servers">
+									<li class="ywfwq"><span>业务服务器:</span><span>3</span></li>
+								</ul>
+								<div class="server-state">
+									<ul class="treeline">
+										<li></li>
+										<li></li>
+									</ul>
+									<ul class="three-state">
+                                        <li>
+                                        	<b style="background-color: #008cee"></b>
+                                        	<span>运行中</span>
+                                        	<i>6</i>
+                                        </li>
+                                        <li>
+                                        	<b style="background-color: #d9d214"></b>
+                                        	<span>异常</span>
+                                        	<i>1</i>
+                                        </li>
+                                        <li>
+                                        	<b style="background-color: #d9143e"></b>
+                                        	<span>已停止</span>
+                                        	<i>3</i>
+                                        </li>
+                                    </ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="structure-tree">
+						<div class="structure-tree-topic"><span>树状结构</span></div>
+						<div class="structure-tree-info">
+							<img src="imgs/tree.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div><!--right-content2-->
+
+			<!--云服务监控页-->
+			<div class="right-content2  rc-height">
+				<div class="r-cloud-server">
+					<span>云服务监控</span>
+					<div class="cloud-server-refresh"><input type="submit" value="刷新"></input>
+					</div>
+				</div>
+				<div class="cloud-server-tab">
+				<div class="table-header">
+					<input type="submit" class="tab-search" value="搜索">
+					<div class="time-search">
+						<span>从</span>
+						<div class="start-time">
+							<div class="time-number">
+								<span>2016.2.1</span>
+							</div>
+							<img src="imgs/time.png" alt="" class="time-img">
+						</div>
+						<span>到</span>
+						<div class="end-time">
+							<div class="time-number">
+								<span>2016.12.12</span>
+							</div>
+							<img src="imgs/time.png" alt="" class="time-img">
+						</div>
+					</div>
+					<div class="search-DMY">
+                        <div class="DMY"><span>按日</span></div>
+                        <div class="DMY"><span>按月</span></div>
+                        <div class="DMY"><span>按年</span></div>
+					</div>
+					<input class="search-word" type="text" placeholder='输入搜索关键字'></input>
+					<select name="" id="" class="search-all">
+						<option value="all">所有</option>
+						<option value="IP">IP</option>
+						<option value="ID">ID</option>
+						<option value="net">网络</option>
+						<option value="state">状态</option>
+					</select>
+				</div>
+
+				<table class="tb-title">
+                    <thead>
+                        <tr>
+                            <th>实例ID/实例名称</th>
+                            <th>IP</th>
+                            <th>网络(全部)</th>
+                            <th>内存使用率</th>
+                            <th>CPU使用率</th>
+                            <th>ECS插件状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody  class="tb-tbody">
+                        <tr>
+                            <th class="slidmc"><div class="tb-tbody-checkbox"></div><span class="slid">i-233vcn7i</span><br/><span class="slmc">i-233vcn7iZ<span></th>
+                            <th>192.168.120.22<span class="siyou">（私有）</span></th>
+                            <th>专有网络</th>
+                            <th>NAN</th>
+                            <th>0.22</th>
+                            <th><span class="click-install">点击安装</span></th>
+                            <th><span class="tbjk">图表监控</span><span class="fgf">|</span><span class="bjgz">报警规则</span></th>
+                        </tr> 
+                        <tr>
+                            <th class="slidmc"><div class="tb-tbody-checkbox"></div><span class="slid">i-233vcn7i</span><br/><span class="slmc">i-233vcn7iZ<span></th>
+                            <th>192.168.120.22<span class="siyou">（私有）</span></th>
+                            <th>专有网络</th>
+                            <th>NAN</th>
+                            <th>0.22</th>
+                            <th><span class="click-install">点击安装</span></th>
+                            <th><span class="tbjk">图表监控</span><span class="fgf">|</span><span class="bjgz">报警规则</span></th>
+                        </tr> 
+                         <tr>
+                            <th class="slidmc"><div class="tb-tbody-checkbox"></div><span class="slid">i-233vcn7i</span><br/><span class="slmc">i-233vcn7iZ<span></th>
+                            <th>192.168.120.22<span class="siyou">（私有）</span></th>
+                            <th>专有网络</th>
+                            <th>NAN</th>
+                            <th>0.22</th>
+                            <th><span class="click-install">点击安装</span></th>
+                            <th><span class="tbjk">图表监控</span><span class="fgf">|</span><span class="bjgz">报警规则</span></th>
+                        </tr> 
+                         <tr>
+                            <th class="slidmc"><div class="tb-tbody-checkbox"></div><span class="slid">i-233vcn7i</span><br/><span class="slmc">i-233vcn7iZ<span></th>
+                            <th>192.168.120.22<span class="siyou">（私有）</span></th>
+                            <th>专有网络</th>
+                            <th>NAN</th>
+                            <th>0.22</th>
+                            <th><span class="click-install">点击安装</span></th>
+                            <th><span class="tbjk">图表监控</span><span class="fgf">|</span><span class="bjgz">报警规则</span></th>
+                        </tr> 
+                        <tr>
+                            <th class="slidmc"><div class="tb-tbody-checkbox"></div><span class="slid">i-233vcn7i</span><br/><span class="slmc">i-233vcn7iZ<span></th>
+                            <th>192.168.120.22<span class="siyou">（私有）</span></th>
+                            <th>专有网络</th>
+                            <th>NAN</th>
+                            <th>0.22</th>
+                            <th><span class="click-install">点击安装</span></th>
+                            <th><span class="tbjk">图表监控</span><span class="fgf">|</span><span class="bjgz">报警规则</span></th>
+                        </tr> 
+                        <tr>
+                            <th class="slidmc"><div class="tb-tbody-checkbox"></div><span class="slid">i-233vcn7i</span><br/><span class="slmc">i-233vcn7iZ<span></th>
+                            <th>192.168.120.22<span class="siyou">（私有）</span></th>
+                            <th>专有网络</th>
+                            <th>NAN</th>
+                            <th>0.22</th>
+                            <th><span class="click-install">点击安装</span></th>
+                            <th><span class="tbjk">图表监控</span><span class="fgf">|</span><span class="bjgz">报警规则</span></th>
+                        </tr> 
+                         <tr>
+                            <th class="slidmc"><div class="tb-tbody-checkbox"></div><span class="slid">i-233vcn7i</span><br/><span class="slmc">i-233vcn7iZ<span></th>
+                            <th>192.168.120.22<span class="siyou">（私有）</span></th>
+                            <th>专有网络</th>
+                            <th>NAN</th>
+                            <th>0.22</th>
+                            <th><span class="click-install">点击安装</span></th>
+                            <th><span class="tbjk">图表监控</span><span class="fgf">|</span><span class="bjgz">报警规则</span></th>
+                        </tr>     
+                    </tbody>
+				</table>
+				<div class="pagenumber-div">
+					<div class="data-nifo"><span>共8页/</span>18条数据</div>
+					<div class="to-which-page">
+						<span>跳转到</span>
+						<input class="which-page" type="text" placeholder=''></input>
+						<span>页</span>
+					</div>
+					<div class="all-pagenumber">
+						<div class="page-img"><img  class="lastpage-img" src="imgs/lastpage.png" alt=""></div>
+						<div class="pagenumber"><span>1</span></div>
+						<div class="pagenumber"><span>2</span></div>
+						<div class="pagenumber"><span>3</span></div>
+						<div class="pagenumber"><span>4</span></div>
+						<div class="pagepoint"><span>...</span></div>
+						<div class="pagenumber"><span>8</span></div>
+						<div class="page-img"><img src="imgs/nextpage.png" alt="" class="nextpage-img"></div>
+					</div>
+				</div>	
+				</div>
+			</div><!--right-content2-->
+
+			<div class="right-content3  rc-height">
+				<div class="child-server-info">
+					<div class="child-server-info-img">
+						<img src="imgs/working.png" alt="">
+					</div>
+					<div class="server-name">
+						<span>服务器名称：</span><br/>
+						<span>GUID:{af67df86-d4d1-43f2-ac50-adad5c4897b2}</span><br/>
+						<span>IP:121.40.30.88</span>
+					</div>
+					<div class="back-button">
+						<img  class="back-img" src="imgs/back.png" alt="">
+					</div>
+					<div class="details-manage">
+						<input type="submit" value="详情">
+						<input type="submit" value="管理">
+					</div>
+					<div class="manage-button">
+						<input type="submit" value="重启">
+						<input type="submit" value="停止">
+						<input type="submit" value="刷新">
+						<input type="submit" value="配置">
+					</div>			
+				</div>
+
+				<div class="mian-child-server">
+					<div class="main-child-server-search">
+						<div class="jk-search">
+							<div  id="jk-search-div">
+							  <div class="jkrztj">
+							      <input type="submit" class="jk-sub" value="监控">
+							      <input type="submit" class="rz-sub" value="日志">
+							      <input type="submit" class="tj-sub" value="统计">
+						        </div>
+                                
+                                <div class="jiankong-search">
+					                <input type="submit" class="tab-search" value="搜索">
+					                <div class="time-search">
+						              <span>从</span>
+						              <div class="start-time">
+							            <div class="time-number">
+								            <span>2016.2.1</span>
+							            </div>
+							            <img src="imgs/time.png" alt="" class="time-img">
+						            </div>
+						            <span>到</span>
+						            <div class="end-time">
+							            <div class="time-number">
+								           <span>2016.12.12</span>
+							            </div>
+							            <img src="imgs/time.png" alt="" class="time-img">
+						            </div>
+
+					             </div> 
+
+					               <input class="search-word" type="text" placeholder='查询历史记录'></input>
+					               <select name="" id="" class="search-all">
+					            	    <option value="all">所有</option>
+						                 <option value="CPU">CPU</option>
+						                <option value="net">网络</option>
+						                <option value="neicun">内存</option>
+						                <option value="cipan">磁盘</option>
+					               </select>
+				                </div>
+				               </div>
+						    </div>
+
+					    </div>
+					    <div class="data-charts"><!--data-chart 统计-->
+					    	<div class="data-charts-title">
+				                 <div class="tpc-data"><span id="tpc-count">TPC数据(count)</span>
+                                        <div class="tpc-search">
+				                 	     <input type="submit" class="tab-search" value="搜索">
+					                        <div class="time-search">
+						                    <span>从</span>
+						                    <div class="start-time">
+							                     <div class="time-number">
+								                 <span>2016.2.1</span>
+							                     </div>
+							                     <img src="imgs/time.png" alt="" class="time-img">
+						                    </div>
+						                    <span>到</span>
+						                       <div class="end-time">
+							                       <div class="time-number">
+								                   <span>2016.12.12</span>
+							                       </div>
+							                       <img src="imgs/time.png" alt="" class="time-img">
+						                       </div>
+					                         </div> 
+				                           </div>
+				                        </div>
+				                 
+					    	</div>
+					    	<div class="data-chart-can">
+                                <canvas id="myChart" ></canvas>
+                            </div>
+					    </div><!--data-chart 统计-->
+
+					    <div class="jk-data-chart"><!--监控 data-chart-->
+					    	<div class="jk-data-chart-can">
+					    		<div class="jk-data-chart-title"><span>CPU使用率(%)</span></div>
+					    	    <div class="jkc">
+                            	    <canvas id="jkChart1" ></canvas>
+                                </div>
+                            </div>
+                            <div class="jk-data-chart-can">
+					    		<div class="jk-data-chart-title">磁盘</div>
+					    		<div class="jkc">
+                            	    <canvas id="jkChart2" ></canvas>
+                                </div>
+                            </div>
+                            <div class="jk-data-chart-can">
+					    		<div class="jk-data-chart-title">内存</div>
+					    		<div class="jkc">
+                            	    <canvas id="jkChart3" ></canvas>
+                            	</div>
+                            </div>
+                            <div class="jk-data-chart-can">
+					    		<div class="jk-data-chart-title">网络</div>
+					    		<div class="jkc">
+                            	    <canvas id="jkChart4" ></canvas>
+                                </div>
+                            </div>
+					    </div><!--监控 data-chart-->
+                      
+                        <div class="data-rizhi"><!--日志data-->
+            				<div class="table-header">
+  					            <input type="submit" class="tab-search" value="搜索">
+					              <div class="time-search">
+						              <span>从</span>
+						              <div class="start-time">
+						      	          <div class="time-number">
+								          <span>2016.2.1</span>
+							              </div>
+							          <img src="imgs/time.png" alt="" class="time-img">
+						          </div>
+						            <span>到</span>
+						            <div class="end-time">
+							              <div class="time-number">
+								          <span>2016.12.12</span>
+							              </div>
+							          <img src="imgs/time.png" alt="" class="time-img">
+						          </div>
+					          </div>
+					          <div class="search-DMY">
+                                  <div class="DMY"><span>按日</span></div>
+                                  <div class="DMY"><span>按月</span></div>
+                                  <div class="DMY"><span>按年</span></div>
+					          </div>
+					          <input class="search-word" type="text" placeholder='输入搜索关键字'></input>
+					          <select name="" id="" class="search-all">
+						          <option value="all">所有</option>
+						          <option value="time">时间</option>
+						          <option value="content">内容</option>
+						          <option value="kind">类型</option>
+						          <option value="ID">ID</option>
+					          </select>
+				            </div>  
+                            
+                            <table class="rizhi-tb">
+                            	<thead class="rizhi-thead">
+                            		<tr>
+                            			<td><span>日志</span></td>
+                            			<td><span>时间</span></td>
+                            			<td><span>级别</span></td>
+                            		</tr>
+                            	</thead>
+                            	<tbody class="rizhi-tbody">
+                            		<tr>
+                            			<td><span>日志内容</span></td>
+                            			<td>
+                            				<span>2016.1.1</span>
+                            				<span>10:22:00</span>
+                            			</td>
+                            			<td><span>.....</span></td>
+                            		</tr>
+                            		<tr>
+                            			<td><span>日志内容</span></td>
+                            			<td>
+                            				<span>2016.1.1</span>
+                            				<span>10:22:00</span>
+                            			</td>
+                            			<td><span>.....</span></td>
+                            		</tr>
+                            		<tr>
+                            			<td><span>日志内容</span></td>
+                            			<td>
+                            				<span>2016.1.1</span>
+                            				<span>10:22:00</span>
+                            			</td>
+                            			<td><span>.....</span></td>
+                            		</tr>
+                            		<tr>
+                            			<td><span>日志内容</span></td>
+                            			<td>
+                            				<span>2016.1.1</span>
+                            				<span>10:22:00</span>
+                            			</td>
+                            			<td><span>.....</span></td>
+                            		</tr>
+                            		<tr>
+                            			<td><span>日志内容</span></td>
+                            			<td>
+                            				<span>2016.1.1</span>
+                            				<span>10:22:00</span>
+                            			</td>
+                            			<td><span>.....</span></td>
+                            		</tr>
+                            		<tr>
+                            			<td><span>日志内容</span></td>
+                            			<td>
+                            				<span>2016.1.1</span>
+                            				<span>10:22:00</span>
+                            			</td>
+                            			<td><span>.....</span></td>
+                            		</tr>
+                            	</tbody>
+                            </table>
+                            
+                           <div class="pagenumber-div">
+					             <div class="data-nifo"><span>共8页/</span>18条数据</div>
+					             <div class="to-which-page">
+						            <span>跳转到</span>
+						            <input class="which-page" type="text" placeholder=''></input>
+						            <span>页</span>
+					             </div>
+					             <div class="all-pagenumber">
+						            <div class="page-img"><img  class="lastpage-img" src="imgs/lastpage.png" alt=""></div>
+						            <div class="pagenumber"><span>1</span></div>
+						            <div class="pagenumber"><span>2</span></div>
+						            <div class="pagenumber"><span>3</span></div>
+						            <div class="pagenumber"><span>4</span></div>
+						            <div class="pagepoint"><span>...</span></div>
+						            <div class="pagenumber"><span>8</span></div>
+						            <div class="page-img"><img src="imgs/nextpage.png" alt="" class="nextpage-img"></div>
+					            </div>
+				           </div>	
+                        </div><!--日志data-->
+                        
+				</div><!--管理main-child-server-->
+				<div class="child-server-data"><!--管理-->
+					<div class="peizhi-div">
+						<table class="peizhi-info">
+							<thead class="peizhi-title">
+								<tr>
+									<td>
+							        <span>基本信息/基本配置</span>
+							        </td>
+							        <td>
+							        <span></span>
+							        </td>
+							        <td>
+							        <span></span>
+							        </td>
+							    </tr>
+						    </thead>
+							<tbody>
+							<tr>
+								<td>
+									<span class="pz-name">镜像ID:</span>
+									<span class="pz-info">win2008_64_stand_r2_cn_40G</span>
+								</td>
+								<td>
+									<span class="pz-name">地域:</span>
+									<span class="pz-info">华东1(杭州)</span>
+								</td>
+								<td>
+									<span class="pz-name">CPU:</span>
+									<span class="pz-info">4核</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="pz-name">所在可用区:</span>
+									<span class="pz-info">华东1 可用区B</span>
+								</td>
+								<td>
+									<span class="pz-name">描述:</span>
+									<span class="pz-info"></span>
+								</td>
+								<td>
+									<span class="pz-name">内存:</span>
+									<span class="pz-info">16384MB</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="pz-name">实例规格:</span>
+									<span class="pz-info">ecd.m1.medium</span>
+								</td>
+								<td>
+									<span class="pz-name">标签:</span>
+									<span class="pz-info"></span>
+								</td>
+								<td>
+									<span class="pz-name">操作系统:</span>
+									<span class="pz-info">Windows_Server</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="pz-name">ID:</span>
+									<span class="pz-info"></span>
+								</td>
+								<td>
+									<span class="pz-name"></span>
+									<span class="pz-info"></span>
+								</td>
+								<td>
+									<span class="pz-name"></span>
+									<span class="pz-info"></span>
+								</td>
+							</tr>
+							<tbody>
+						</table>
+					</div>
+
+					<div class="state-chart">
+						<div class="state-chart-title"><span>状态</span></div>
+						<div class="state-chart-div">
+							<div class="state-chart-point">
+								<div class="cpu-point"></div>
+								<span>CPU</span>
+								<div class="neicun-point"></div>
+								<span>内存</span>
+							</div>
+							<canvas id="state-chart1"></canvas>
+						</div>
+					</div>
+				</div><!--管理-->
+
+				<div class="xiangqing"><!--详情-->
+					<div class="xiangqing-div">
+						<div class="xiangqing-search">
+							<div class="table-header">
+					<input type="submit" class="tab-search" value="搜索">
+					<div class="time-search">
+						<span>从</span>
+						<div class="start-time">
+							<div class="time-number">
+								<span>2016.2.1</span>
+							</div>
+							<img src="imgs/time.png" alt="" class="time-img">
+						</div>
+						<span>到</span>
+						<div class="end-time">
+							<div class="time-number">
+								<span>2016.12.12</span>
+							</div>
+							<img src="imgs/time.png" alt="" class="time-img">
+						</div>
+					</div>
+					<input class="search-word" type="text" placeholder='输入搜索关键字'></input>
+				            </div>
+						</div>
+						<div class="xiangqing-info"><span class="xiangqing-info-name">服务器GUID:</span><span class="xiangqing-info-state">i-23syo4rb4</span></div>
+						<div class="xiangqing-info"><span class="xiangqing-info-name">本地端口:</span><span class="xiangqing-info-state">....</span></div>
+						<div class="xiangqing-info"><span class="xiangqing-info-name">网络类型:</span><span class="xiangqing-info-state">....</span></div>
+						<div class="xiangqing-info"><span class="xiangqing-info-name">CPU:</span><span class="xiangqing-info-state">....</span></div>
+						<div class="xiangqing-info"><span class="xiangqing-info-name">磁盘:</span><span class="xiangqing-info-state">.....</span></div>
+						<div class="xiangqing-info"><span class="xiangqing-info-name">内存:</span><span class="xiangqing-info-state">....</span></div>
+					</div>
+				</div><!--详情-->
+			</div><!--right-content3-->
+             
+            
+		    <div class="user-manage-content  rc-height"><!--用户管理-->
+				<div class="user-manage-content-title">
+					<span>用户管理</span>
+				</div> 
+
+				<div class="user-manage-set">
+					<table class="user-manage-tb">
+						<thead>
+							<tr>
+								<td>用户名</td>
+								<td>类型</td>
+								<td>操作</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>XXXX</td>
+								<td>管理员</td>
+								<td>
+									<div class="caozuo">
+										<div class="user-del-div">
+											<img src="imgs/changepwd2.png" alt="">
+										</div>
+										<div class="user-pwd-change">
+											<img src="imgs/deleteuser.png" alt="">
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>XXXX</td>
+								<td>普通用户</td>
+								<td>
+									<div class="caozuo">
+										<div class="user-del-div">
+											<img src="imgs/changepwd2.png" alt="">
+										</div>
+										<div class="user-pwd-change">
+											<img src="imgs/deleteuser.png" alt="">
+										</div>
+									</div>
+								</td>
+								</td>
+							</tr>
+							<tr>
+								<td>XXXX</td>
+								<td>普通用户</td>
+								<td>
+									<div class="caozuo">
+										<div class="user-del-div">
+											<img src="imgs/changepwd2.png" alt="">
+										</div>
+										<div class="user-pwd-change">
+											<img src="imgs/deleteuser.png" alt="">
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>XXXX</td>
+								<td>普通用户</td>
+								<td>
+									<div class="caozuo">
+										<div class="user-del-div">
+											<img src="imgs/changepwd2.png" alt="">
+										</div>
+										<div class="user-pwd-change">
+											<img src="imgs/deleteuser.png" alt="">
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>XXXX</td>
+								<td>普通用户</td>
+								<td>
+									<div class="caozuo">
+										<div class="user-del-div">
+											<img src="imgs/changepwd2.png" alt="">
+										</div>
+										<div class="user-pwd-change">
+											<img src="imgs/deleteuser.png" alt="">
+										</div>
+									</div>
+								</td>
+							</tr>							
+						</tbody>
+					</table>
+					<div class="add-user">
+						<input type="submit" class="user-add" value="增加用户">
+					</div>
+					
+				</div>
+			</div><!--用户管理-->
+			<!-- </div> --><!--right-content4-->
+
+			<div class="change-pwd-content  rc-height"><!--修改密码-->
+				<div class="change-pwd-content-title">
+					<span>修改密码</span>
+				</div>
+
+				<div class="caozuozhinan">
+					<div class="czzn-title">
+						<span>操作指南</span>
+					</div>
+					<div class="czzn-new-old-pwd">
+					  <div class="czzn-new-old-pwd-div">
+						<div class="czzn-old-pwd">
+							<span>原密码</span>
+							<div class="czzn-old-pwd-div">
+								<img src="imgs/pwd3.png" alt="">
+								<input class="czzn-old-pwd-input" type="text" name='name' placeholder=''>
+							</div>
+						</div>
+						<div class="czzn-new-pwd">
+							<span>新密码</span>
+							<div class="czzn-mew-pwd-div">
+								<img src="imgs/pwd3.png" alt="">
+								<input class="czzn-mew-pwd-input" type="text" name='name' placeholder=''>
+							</div>
+						</div>
+						<div class="czzn-enter-pwd">
+							<span>确认密码</span>
+							<div class="czzn-enter-pwd-div">
+								<img src="imgs/pwd3.png" alt="">
+								<input class="czzn-enter-pwd-input" type="text" name='name' placeholder=''>
+							</div>
+						</div>
+						<div class="czzn-sub">
+							<input type="submit" class="czzn-enter-sub" value="确定">
+						</div>
+					  </div>
+					</div>
+				</div>
+			</div><!--修改密码-->
+		 </div><!--right-content-->
+		</div><!--content-->
+		<div class="adduser-tanchuang-main"><!--增加用户弹窗-->
+						<div class="adduser-tanchuang">
+							<div class="adduser-off">
+								<img src="imgs/off.png" alt="">
+							</div>
+							<div class="adduser-title">
+								<span>增加用户</span>
+							</div>
+							<div class="adduser-leixing">
+								<span>类型</span>
+								<div class="adduser-leixing-div">
+				    	            <img class="adduser-img" src="imgs/leixing.png" alt="">
+				                    <input class="adduser-leixing-input" type="text" name='name' placeholder=''>
+				                </div>
+							</div>
+							<div class="adduser-leixing" id="adduser-name">
+								<span>用户名</span>
+								<div class="adduser-leixing-div">
+				    	            <img class="adduser-img" src="imgs/name1.png" alt="">
+				                    <input class="adduser-leixing-input" type="text" name='name' placeholder=''>
+				                </div>
+							</div>
+							<div class="adduser-leixing" id="adduser-pwd">
+								<span>密码</span>
+								<div class="adduser-leixing-div">
+				    	            <img class="adduser-img" src="imgs/pwd4.png" alt="">
+				                    <input class="adduser-leixing-input" type="text" name='name' placeholder=''>
+				                </div>
+							</div>
+							<div class="adduser-enter-cancel">
+						         <input type="submit" class="adduser-enter" value="确定">
+						         <input type="submit" class="adduser-cancel" value="取消">
+					         </div>
+				        </div>
+		</div><!--增加用户弹窗-->
+		<div class="xiugaimima-main"><!--修改密码弹窗-->
+			<div class="xiugaimima">
+				<div class="xgmm-off">
+					<img src="imgs/off.png" alt="">
+				</div>
+				<div class="xgmm-title">
+					<span>修改密码</span>
+				</div>
+
+				<div class="xgmm-new">
+					<span>新密码</span>
+					<div class="xgmm-new-div">
+				    	<img class="xgmm-img" src="imgs/pwd4.png" alt="">
+				        <input class="xgmm-new-input" type="text" name='name' placeholder=''>
+				    </div>
+				</div>
+
+				<div class="xgmm-enter">
+					<span>确认密码</span>
+					<div class="xgmm-enter-div">
+				    	<img class="xgmm-enter-img" src="imgs/pwd4.png" alt="">
+				        <input class="xgmm-enter-input" type="text" name='name' placeholder=''>
+				    </div>
+				</div>
+                
+                <div class="xgmm-enter-cancel">
+				    <input type="submit" class="xgmm-enter-sub" value="确定">
+					<input type="submit" class="xgmm-cancel-sub" value="取消">
+			    </div>
+
+			</div>
+		</div><!--修改密码弹窗-->
+	</div><!--main-->
+	<script src="js/jquery-3.0.0.js"></script>
+	<script src="js/Chart.js"></script>
+	<script src="js/excanvas.js"></script>
+	<script src="js/control.js"></script>
+</body>
+</html>
